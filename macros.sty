@@ -1,0 +1,83 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{macros}[2025/08/18 Macros para manual de Diseño y Análisis de Experimentos]
+
+% Paquetes requeridos
+\RequirePackage{environ} % para \NewEnviron y \BODY
+\RequirePackage{amsmath, amssymb, amsthm}
+\RequirePackage{siunitx}
+\RequirePackage{booktabs}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+
+% -------------------------------
+% Toggle para mostrar/ocultar soluciones
+% -------------------------------
+\newif\ifshowsolutions
+% \showsolutionsfalse   % por defecto, NO mostrar
+\showsolutionstrue   % descomenta esta línea para mostrar soluciones
+
+% -------------------------------
+% Entorno de ejercicio
+% -------------------------------
+\newcounter{ejercicio}
+\newenvironment{ejercicio}[1][]{
+  \refstepcounter{ejercicio}
+  \par\medskip
+  \noindent\textbf{Ejercicio \theejercicio.} \textit{#1}\par
+  \noindent\rule{\textwidth}{0.4pt}\par\medskip
+}{\par\medskip \noindent\rule{\textwidth}{0.4pt}\par\medskip}
+
+% -------------------------------
+% Entorno 'clave' condicionado (versión robusta con environ)
+% -------------------------------
+% NOTA: No usar \newenvironment aquí. Esta versión evita el "Incomplete \iffalse".
+\NewEnviron{clave}{%
+  \ifshowsolutions
+    \par\medskip
+    \noindent\textbf{Clave rápida (solo profesor)}\par
+    \begingroup\small
+    \BODY
+    \par\endgroup\medskip
+  \fi
+}
+
+% -------------------------------
+% Entorno de pasos
+% -------------------------------
+\newenvironment{pasos}{\begin{enumerate}[leftmargin=*, itemsep=2pt]}{\end{enumerate}}
+
+% -------------------------------
+% Comando para datos en bloque monoespaciado
+% -------------------------------
+\newcommand{\datos}[1]{%
+  \par\medskip
+  \noindent\textbf{Datos (muestra)}\par
+  \begingroup\ttfamily\small #1 \par\endgroup
+  \medskip
+}
+
+% -------------------------------
+% Rúbrica reutilizable
+% -------------------------------
+\newcommand{\rubricaIC}{%
+\begin{table}[h!]
+\centering
+\begin{tabular}{p{0.28\textwidth} p{0.52\textwidth} c}
+\toprule
+\textbf{Criterio} & \textbf{Descripción} & \textbf{Puntos}\\
+\midrule
+Cálculo de la media muestral & Correcto cálculo de la media de los datos. & 10\\
+Cálculo de la desviación estándar muestral & Obtención adecuada de la desviación estándar. & 10\\
+Cálculo del error estándar (SE) & Determinación correcta de $SE = s/\sqrt{n}$. & 10\\
+Selección del valor crítico & Elección correcta entre $Z$ o $t$ y justificación. & 15\\
+Margen de error (ME) & Cálculo correcto del margen de error. & 10\\
+Construcción del intervalo de confianza & Intervalo calculado correctamente. & 20\\
+Interpretación de resultados & Explicación contextualizada en Ingeniería Industrial. & 15\\
+Presentación y orden & Trabajo ordenado, claro y legible. & 10\\
+\bottomrule
+\end{tabular}
+\caption{Rúbrica de evaluación (100 puntos).}
+\end{table}
+}
