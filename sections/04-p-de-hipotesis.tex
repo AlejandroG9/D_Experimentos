@@ -1,0 +1,142 @@
+%! Author = alejandrogonzalezturrubiates
+%! Date = 28/08/25
+
+\section{Pruebas de hipótesis (muestras grandes)}
+
+\begin{ejercicio}[Duración de lotes en línea de ensamble (n=900)]
+Un ingeniero de procesos afirma que el tiempo promedio para ensamblar un lote
+es de $\mu_0=150$ minutos. La gerencia sospecha que el tiempo real es diferente
+y propone como hipótesis alternativa $\mu_1=147$. Se conoce que la desviación
+estándar del proceso es $\sigma=28$ y se cuenta con una muestra de $n=900$ lotes.
+Se desea aplicar una prueba de hipótesis bilateral con $\alpha=0.05$.
+
+\datos{%
+$\mu_0=150$, \quad $\mu_1=147$, \quad $n=900$, \quad $\sigma=28$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=150$ y $H_1:\mu\neq150$.
+  \item Calcule $\sigma_{\bar{x}}=\sigma/\sqrt{n}$.
+  \item Use $Z_{\alpha/2}=1.96$ y forme el intervalo de aceptación $\mu_0\pm Z\,\sigma_{\bar{x}}$.
+  \item Verifique si $\mu_1$ cae dentro/fuera del intervalo y concluya sobre $H_0$.
+\end{pasos}
+
+\begin{clave}
+$\sigma_{\bar{x}}=\frac{28}{\sqrt{900}}=0.933$, \;
+$Z_{0.025}=1.96$, \;
+$ME=1.96(0.933)=1.829$.\\
+Intervalo de aceptación: $(148.171,\,151.829)$. \;
+$\mu_1=147$ queda \textbf{fuera} $\Rightarrow$ \textbf{rechazar $H_0$}.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Tiempo de inspección de calidad (n=1600)]
+El departamento de calidad asegura que el tiempo promedio para inspeccionar un
+lote de producto terminado es de $\mu_0=80$ minutos. Un auditor externo duda de
+esta cifra y sospecha que el tiempo podría ser mayor. Para contrastar, se propone
+como hipótesis alternativa $\mu_1=82.2$. Se sabe que la desviación estándar del
+proceso es $\sigma=12$, con $n=1600$ observaciones. Nivel de significancia:
+$\alpha=0.10$ (bilateral).
+
+\datos{%
+$\mu_0=80$, \quad $\mu_1=82.2$, \quad $n=1600$, \quad $\sigma=12$, \quad $\alpha=0.10$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=80$ y $H_1:\mu\neq80$.
+  \item Calcule $\sigma_{\bar{x}}=\sigma/\sqrt{n}$ y $Z_{\alpha/2}$.
+  \item Construya el intervalo de aceptación y decida sobre $H_0$.
+\end{pasos}
+
+\begin{clave}
+$\sigma_{\bar{x}}=\frac{12}{\sqrt{1600}}=0.300$, \;
+$Z_{0.05}=1.645$, \;
+$ME=1.645(0.300)=0.494$.\\
+Intervalo: $(79.506,\,80.494)$. \;
+$\mu_1=82.2$ \textbf{fuera} $\Rightarrow$ \textbf{rechazar $H_0$}.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Tiempos de preparación de máquina CNC (n=2500)]
+Un proveedor garantiza que el tiempo promedio de preparación de una máquina CNC
+es de $\mu_0=25$ minutos. Un supervisor cree que en realidad el tiempo es menor
+y propone como hipótesis alternativa $\mu_1=24.6$. Se sabe que la desviación
+estándar histórica es $\sigma=5$, con $n=2500$ mediciones. Se realiza la prueba
+al 20\% de significancia.
+
+\datos{%
+$\mu_0=25$, \quad $\mu_1=24.6$, \quad $n=2500$, \quad $\sigma=5$, \quad $\alpha=0.20$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=25$ y $H_1:\mu\neq25$.
+  \item Calcule $\sigma_{\bar{x}}$ y $Z_{\alpha/2}$.
+  \item Genere el intervalo de aceptación y concluya.
+\end{pasos}
+
+\begin{clave}
+$\sigma_{\bar{x}}=\frac{5}{\sqrt{2500}}=0.100$, \;
+$Z_{0.10}=1.282$, \;
+$ME=1.282(0.100)=0.128$.\\
+Intervalo: $(24.872,\,25.128)$. \;
+$\mu_1=24.6$ \textbf{fuera} $\Rightarrow$ \textbf{rechazar $H_0$}.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Producción de piezas diarias (n=2000)]
+Se establece que la producción diaria promedio de una línea es de $\mu_0=300$ piezas.
+Un analista sospecha que la producción puede estar cambiando y toma como hipótesis
+alternativa $\mu_1=301$. La desviación estándar histórica es $\sigma=40$ y se
+dispone de $n=2000$ días de registro. Se usa un nivel de significancia $\alpha=0.02$.
+
+\datos{%
+$\mu_0=300$, \quad $\mu_1=301$, \quad $n=2000$, \quad $\sigma=40$, \quad $\alpha=0.02$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=300$ y $H_1:\mu\neq300$.
+  \item Calcule $\sigma_{\bar{x}}$ y $Z_{\alpha/2}$.
+  \item Construya el intervalo de aceptación y verifique si contiene $\mu_1$.
+\end{pasos}
+
+\begin{clave}
+$\sigma_{\bar{x}}=\frac{40}{\sqrt{2000}}=0.894$, \;
+$Z_{0.01}\approx2.326$, \;
+$ME=2.326(0.894)=2.079$.\\
+Intervalo: $(297.921,\,302.079)$. \;
+$\mu_1=301$ \textbf{dentro} $\Rightarrow$ \textbf{no rechazar $H_0$}.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Tiempo de ciclo en estación automática (n=3600)]
+En una estación automática se reporta que el tiempo de ciclo promedio es de $\mu_0=60$ segundos.
+Un investigador quiere comprobar si existe una desviación significativa, proponiendo $\mu_1=59.9$.
+Se sabe que $\sigma=9$, $n=3600$ y $\alpha=0.01$.
+
+\datos{%
+$\mu_0=60$, \quad $\mu_1=59.9$, \quad $n=3600$, \quad $\sigma=9$, \quad $\alpha=0.01$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=60$ y $H_1:\mu\neq60$.
+  \item Calcule $\sigma_{\bar{x}}$ y $Z_{\alpha/2}$.
+  \item Intervalo de aceptación y decisión sobre $H_0$.
+\end{pasos}
+
+\begin{clave}
+$\sigma_{\bar{x}}=\frac{9}{\sqrt{3600}}=0.150$, \;
+$Z_{0.005}=2.576$, \;
+$ME=2.576(0.150)=0.386$.\\
+Intervalo: $(59.614,\,60.386)$. \;
+$\mu_1=59.9$ \textbf{dentro} $\Rightarrow$ \textbf{no rechazar $H_0$}.
+\end{clave}
+\end{ejercicio}

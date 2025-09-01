@@ -9,14 +9,15 @@
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
 \RequirePackage{hyperref}
+\RequirePackage{float}
 \hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
 
 % -------------------------------
 % Toggle para mostrar/ocultar soluciones
 % -------------------------------
 \newif\ifshowsolutions
-% \showsolutionsfalse   % por defecto, NO mostrar
-\showsolutionstrue   % descomenta esta línea para mostrar soluciones
+\showsolutionsfalse   % por defecto, NO mostrar
+%\showsolutionstrue   % descomenta esta línea para mostrar soluciones
 
 % -------------------------------
 % Entorno de ejercicio
@@ -62,7 +63,7 @@
 % Rúbrica reutilizable
 % -------------------------------
 \newcommand{\rubricaIC}{%
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tabular}{p{0.28\textwidth} p{0.52\textwidth} c}
 \toprule
@@ -79,5 +80,55 @@ Presentación y orden & Trabajo ordenado, claro y legible. & 10\\
 \bottomrule
 \end{tabular}
 \caption{Rúbrica de evaluación (100 puntos).}
+\end{table}
+}
+
+
+
+\newcommand{\rubricaProp}{%
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.28\textwidth} p{0.52\textwidth} c}
+\toprule
+\textbf{Criterio} & \textbf{Descripción} & \textbf{Puntos}\\
+\midrule
+Cálculo de la proporción muestral $\hat{p}$
+& Correcto cálculo de la proporción $x/n$. & 15\\
+Cálculo del error estándar (SE)
+& Determinación correcta de $SE = \sqrt{\hat{p}(1-\hat{p})/n}$. & 15\\
+Selección del valor crítico
+& Elección adecuada del valor $Z$ para el nivel de confianza. & 15\\
+Cálculo del margen de error (ME)
+& Cálculo correcto de $ME = Z \times SE$. & 15\\
+Construcción del intervalo de confianza
+& Intervalo calculado correctamente. & 20\\
+Interpretación de resultados
+& Explicación contextualizada en el problema de Ingeniería Industrial. & 15\\
+Presentación y orden
+& Trabajo ordenado, claro y legible. & 5\\
+\bottomrule
+\end{tabular}
+\caption{Rúbrica de evaluación para intervalos de confianza de proporciones (100 puntos).}
+\end{table}
+}
+
+
+\newcommand{\rubricaHipotesis}{%
+\begin{table}[H]
+\centering
+\begin{tabular}{p{0.30\textwidth} p{0.50\textwidth} c}
+\toprule
+\textbf{Criterio} & \textbf{Descripción} & \textbf{Puntos}\\
+\midrule
+Planteamiento de hipótesis & Redacción correcta de $H_0$ y $H_1$ según el problema. & 15\\
+Cálculo del error estándar (SE) & Determinación adecuada de $\sigma_{\bar{x}} = \sigma/\sqrt{n}$. & 15\\
+Selección del valor crítico & Elección correcta de $Z_{\alpha/2}$ según el nivel de significancia. & 15\\
+Construcción del intervalo de aceptación & Obtención correcta de $[\mu_0 \pm Z\cdot\sigma_{\bar{x}}]$. & 20\\
+Decisión estadística & Identificación correcta de si se acepta o rechaza $H_0$. & 15\\
+Interpretación en contexto & Explicación clara en términos del proceso de Ingeniería Industrial. & 15\\
+Presentación y orden & Trabajo limpio, ordenado y legible. & 5\\
+\bottomrule
+\end{tabular}
+\caption{Rúbrica de evaluación para pruebas de hipótesis en muestras grandes (100 puntos).}
 \end{table}
 }
