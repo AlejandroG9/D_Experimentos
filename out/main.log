@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.10.29)  1 SEP 2025 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2024.10.29)  10 SEP 2025 11:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -479,7 +479,36 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks37
 \@floatcapt=\box65
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 13.
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/pdflscape/p
+dflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/pdflscape/p
+dflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/graphics/ls
+cape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/graphics/tr
+ig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+))
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 14.
 \c@ejercicio=\count313
 )
 (/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/l3backend/l
@@ -573,8 +602,20 @@ or `spanish'. on input line 23.
 \makeMPintoPDFobject=\count320
 \everyMPtoPDFconversion=\toks39
 )
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/epstopdf-pk
+g/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/latexconfig
+/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 Package hyperref Info: Link coloring ON on input line 23.
- (/Users/alejandrogonzalezturrubiates/Proyectos/DA_Experimentos/out/main.out)
+
+(/Users/alejandrogonzalezturrubiates/Proyectos/DA_Experimentos/out/main.out)
 (/Users/alejandrogonzalezturrubiates/Proyectos/DA_Experimentos/out/main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -601,7 +642,11 @@ LaTeX Info: Redefining \% on input line 1.
 \openout4 = `main.toc'.
 
 
-(./sections/01-introduccion.tex) (./sections/02-e-intervalos.tex
+(./sections/01-introduccion.tex) (./sections/02-e-intervalos.tex [1
+
+{/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-var/fonts/map/pdftex/updma
+p/pdftex.map}{/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/en
+c/dvips/cm-super/cm-super-t1.enc}]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 3.
 
@@ -620,11 +665,7 @@ Overfull \hbox (14.40068pt too wide) in paragraph at lines 13--13
 13.5, 12.6, 12.0, 11.8,
  []
 
-[1
 
-{/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-var/fonts/map/pdftex/updma
-p/pdftex.map}{/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/en
-c/dvips/cm-super/cm-super-t1.enc}]
 Overfull \hbox (32.0255pt too wide) in paragraph at lines 42--42
 []\T1/cmtt/m/n/10.95 12.2, 12.6, 11.8, 12.7, 12.9, 12.4, 11.9, 12.2, 12.8, 12.3
 , 12.3, 11.6, 11.9, 13.7,
@@ -642,7 +683,7 @@ Overfull \hbox (14.40068pt too wide) in paragraph at lines 42--42
 13.0, 11.4, 13.2, 12.0,
  []
 
-
+[2]
 Overfull \hbox (32.0255pt too wide) in paragraph at lines 70--70
 []\T1/cmtt/m/n/10.95 12.2, 11.2, 12.4, 12.6, 11.8, 12.5, 12.5, 12.6, 12.5, 11.3
 , 12.2, 12.9, 12.8, 11.8,
@@ -654,7 +695,7 @@ Overfull \hbox (14.40068pt too wide) in paragraph at lines 70--70
 12.8, 12.3, 12.2, 12.5,
  []
 
-[2]
+
 Overfull \hbox (32.0255pt too wide) in paragraph at lines 99--99
 []\T1/cmtt/m/n/10.95 12.3, 13.7, 13.0, 11.6, 11.9, 12.8, 12.7, 12.4, 12.4, 12.7
 , 13.1, 12.4, 13.4, 13.3,
@@ -672,7 +713,7 @@ Overfull \hbox (14.40068pt too wide) in paragraph at lines 99--99
 12.2, 12.4, 11.8, 13.6,
  []
 
-
+[3]
 Overfull \hbox (32.0255pt too wide) in paragraph at lines 128--128
 []\T1/cmtt/m/n/10.95 13.2, 11.8, 12.6, 13.1, 11.5, 13.0, 13.4, 12.9, 12.4, 12.9
 , 13.5, 12.4, 11.8, 12.6,
@@ -690,7 +731,7 @@ Overfull \hbox (14.40068pt too wide) in paragraph at lines 128--128
 11.8, 13.0, 12.1, 12.4,
  []
 
-[3]
+
 Overfull \hbox (32.0255pt too wide) in paragraph at lines 157--157
 []\T1/cmtt/m/n/10.95 12.2, 13.4, 12.0, 12.5, 12.2, 12.8, 12.0, 13.5, 13.2, 13.1
 , 11.6, 11.9, 12.6, 12.6,
@@ -709,19 +750,19 @@ Overfull \hbox (14.40068pt too wide) in paragraph at lines 157--157
  []
 
 ) (./sections/02-e-intervalos-rubrica.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--4
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
 []|\T1/cmr/m/n/12 Cálculo de la me-dia
  []
 
-) (./sections/03-e-intervalos-proporciones.tex [4] [5
+[4]) (./sections/03-e-intervalos-proporciones.tex [5
 pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.43   \item O
-              btenga $ME=Z \times SE$ e informe el IC $\hat{p}\pm ME$.]
-[6]) (./sections/03-e-intervalos-proporciones-rubrica.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--5
+l.41   \item C
+              alcule $SE = \sqrt{\hat{p}(1-\hat{p})/n}$.] [6])
+(./sections/03-e-intervalos-proporciones-rubrica.tex
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
 []|\T1/cmr/m/n/12 Determinación co-rrec-ta de $\OML/cmm/m/it/12 SE \OT1/cmr/m/n
 /12 =
  []
@@ -731,13 +772,117 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.16 
-     ] [8]) (./sections/04-p-de-hipotesis-rubrica.tex) [9] [10
+l.12 
+     ] [8]) (./sections/04-p-de-hipotesis-rubrica.tex)
+(./sections/05-p-de-hipotesis-proporciones.tex [9] [10
 pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
  been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.35 \end{document}
+l.40 U
+      n proveedor asegura que solo el $5\%$ de las piezas plÃ¡sticas present...
+] [11]) (./sections/05-p-de-hipotesis-proporciones-rubrica.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/cmr/m/n/12 Interpretación con-tex-
+ []
+
+) (./sections/06-p-de-hipotesis-pequenas.tex [12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sigma' on input line 4.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4.
+
+[13
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.40 }
+      ] [14]) (./sections/06-p-de-hipotesis-pequenas-rubrica.tex)
+(./sections/07-p-de-hipotesis-diferencia-medias.tex [15
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.19 U
+      na empresa desea comparar el salario por hora entre las sedes \textit{...
+] [16] [17]) (./sections/07-p-de-hipotesis-diferencia-medias-rubrica.tex
+Underfull \hbox (badness 5490) in paragraph at lines 22--22
+[]|\T1/cmr/m/n/12 Intervalo de con-fian-za
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 23--23
+\T1/cmr/m/n/12 trial (sa-la-rios, tiem-pos de ci-clo, efi-cien-cia,
+ []
+
+) (./sections/08-p-de-hipotesis-diferencia-proporciones.tex [18] [19
+pdfTeX warning (ext4): destination with the same identifier (name{table.6}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.44 }
+      ] [20] [21])
+(./sections/08-p-de-hipotesis-diferencia-proporciones-rubrica.tex
+Underfull \hbox (badness 4084) in paragraph at lines 14--14
+[]|\T1/cmr/m/n/12 Cálculo de pro-por-cio-nes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+[]|\T1/cmr/m/n/12 Calcula ade-cua-da-men-te $\OML/cmm/m/it/12 SE \OT1/cmr/m/n/1
+2 =
+ []
+
+) (./sections/09-p-de-hipotesis-diferencia-medias-pequenas.tex [22] [23
+pdfTeX warning (ext4): destination with the same identifier (name{table.7}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.41   \item P
+              lantee $H_0:\mu_1-\mu_2=0$ \quad vs. \quad $H_1:\mu_1-\mu_2>0$...
+] [24] [25])
+(./sections/09-p-de-hipotesis-diferencia-medias-pequeÃ±as-rubrica.tex
+Underfull \hbox (badness 1231) in paragraph at lines 14--14
+[]|\T1/cmr/m/n/12 Cálculo de la va-rian-za
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/cmr/m/n/12 Determinación de los
+ []
+
+) (./sections/99-anexos.tex [26
+pdfTeX warning (ext4): destination with the same identifier (name{table.8}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.119 \noindent
+               \footnotesize Nota: Valores aproximados de $t_{\alpha/2,gl}$ ...
+] [27] [28]
+Overfull \hbox (9.71376pt too wide) in paragraph at lines 256--256
+ [][] 
+ []
+
+[29] [30
+pdfTeX warning (ext4): destination with the same identifier (name{table.9}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.336 
+      ]) [31
+pdfTeX warning (ext4): destination with the same identifier (name{table.10}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.46 \end{document}
                    ]
 (/Users/alejandrogonzalezturrubiates/Proyectos/DA_Experimentos/out/main.aux
 LaTeX Info: Redefining \. on input line 8.
@@ -748,42 +893,53 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 813A2F56E50E7145456A52AACC8F340E;1356.
+(rerunfilecheck)             Checksum: D6978CFA2E226C527A28C3E848955E49;3496.
  ) 
 Here is how much of TeX's memory you used:
- 16390 strings out of 474116
- 316619 string characters out of 5732612
- 1939187 words of memory out of 5000000
- 38439 multiletter control sequences out of 15000+600000
- 575871 words of font info for 84 fonts, out of 8000000 for 9000
+ 17050 strings out of 474116
+ 330630 string characters out of 5732612
+ 1989187 words of memory out of 5000000
+ 38852 multiletter control sequences out of 15000+600000
+ 579601 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,14n,94p,541b,1111s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,15n,109p,541b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20240
 312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew
 /Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/202
-40312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew
-/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/pu
-blic/cm-super/sfbx1200.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf
--dist/fonts/type1/public/cm-super/sfbx1440.pfb></opt/homebrew/Cellar/texlive/20
-240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></opt/homebr
-ew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm1
+7.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/202
+40312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebre
+w/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+17.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></opt/homebrew/Cellar/texlive/2024
+0312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/
+Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt/homebrew/Cellar/texlive/2024
+0312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></opt/homebrew
+/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfbx120
+0.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/pub
+lic/cm-super/sfbx1440.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-
+dist/fonts/type1/public/cm-super/sfbx1728.pfb></opt/homebrew/Cellar/texlive/202
+40312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></opt/homebre
+w/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm10
+00.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/pu
+blic/cm-super/sfrm1200.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf
+-dist/fonts/type1/public/cm-super/sfrm1440.pfb></opt/homebrew/Cellar/texlive/20
+240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></opt/homebr
+ew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1
 200.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1440.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texm
-f-dist/fonts/type1/public/cm-super/sfrm2074.pfb></opt/homebrew/Cellar/texlive/2
-0240312_3/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></opt/homeb
-rew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/cm-super/sftt
-1095.pfb>
+ublic/cm-super/sftt1095.pfb>
 Output written on /Users/alejandrogonzalezturrubiates/Proyectos/DA_Experimentos
-/out/main.pdf (10 pages, 266417 bytes).
+/out/main.pdf (31 pages, 456590 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 109 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 554 compressed objects within 6 object streams
+ 292 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

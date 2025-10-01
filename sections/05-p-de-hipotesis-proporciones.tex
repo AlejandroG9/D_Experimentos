@@ -1,0 +1,162 @@
+%! Author = alejandrogonzalezturrubiates
+%! Date = 03/09/25
+
+\section{Pruebas de hipótesis para proporciones (muestras grandes)}
+
+\begin{ejercicio}[¿Quién tiene la razón sobre la pro-movilidad? (n=150)]
+Una compañía evalúa la \textbf{proporción de empleados pro–movibles} (aptos para ascenso).
+El Director de R.H. afirma que la proporción poblacional es $p_0=0.80$.
+Un comité entrevista en profundidad a $n=150$ empleados y concluye que el $70\%$ de la muestra cumple los requisitos ($\hat p=0.70$).
+Con $\alpha=0.05$, determine quién tiene la razón.
+
+\datos{%
+$p_0 = 0.80$, \quad $n=150$, \quad $\hat p = 0.70 \;(\Rightarrow x=105)$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p = 0.80$ vs.\ $H_1: p \neq 0.80$ (prueba bilateral al 5\%).
+  \item Calcule el error estándar \emph{bajo $H_0$}: $SE_0=\sqrt{p_0(1-p_0)/n}$.
+  \item Obtenga la estadística $Z = \dfrac{\hat p - p_0}{SE_0}$.
+  \item Compare $|Z|$ con $Z_{0.025}=1.96$ \emph{o} compute el \emph{p–valor} bilateral.
+  \item Concluya en términos del problema: ¿se sostiene la afirmación de R.H. o la del comité?
+  \item (\emph{Opcional de contraste}) Construya el IC95\% para $p$ con $SE=\sqrt{\hat p(1-\hat p)/n}$ y verifique si contiene $0.80$.
+\end{pasos}
+
+\begin{clave}
+$SE_0=\sqrt{0.80\cdot 0.20/150}=\sqrt{0.0010667}\approx 0.03268$.\\
+$Z=\dfrac{0.70-0.80}{0.03268}\approx -3.06$;\quad $|Z|>1.96 \Rightarrow$ \textbf{rechazar $H_0$}.\\
+\emph{p–valor} (bilateral) $\approx 2\cdot \Phi(-3.06)\approx 0.0022<0.05$.\\
+IC95\% (Wald) para $p$: $SE=\sqrt{0.70\cdot 0.30/150}\approx 0.0374$, \; $ME=1.96\cdot SE\approx 0.0733$.\\
+IC95\% $\approx (0.6267,\; 0.7733)$, \; no contiene $0.80$.\\[2pt]
+\textbf{Conclusión:} La proporción poblacional difiere de $0.80$ y es menor; \textbf{tiene la razón el comité}, no se sostiene la aseveración de R.H.
+\end{clave}
+\end{ejercicio}
+
+
+
+
+\begin{ejercicio}[Defectos en piezas inyectadas (n=400)]
+Un proveedor asegura que solo el $5\%$ de las piezas plásticas presentan defectos ($p_0=0.05$).
+Un ingeniero de calidad toma $n=400$ piezas y encuentra que el $8\%$ presentan defectos ($\hat p=0.08$).
+¿Se debe rechazar la afirmación del proveedor al nivel $\alpha=0.05$?
+
+\datos{%
+$p_0=0.05$, \quad $n=400$, \quad $\hat p=0.08$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p=0.05$ vs.\ $H_1: p\neq0.05$.
+  \item Calcule $SE_0=\sqrt{p_0(1-p_0)/n}$.
+  \item Obtenga $Z=(\hat p - p_0)/SE_0$ y compare con $Z_{0.025}=1.96$.
+  \item Concluya en contexto.
+\end{pasos}
+
+\begin{clave}
+$SE_0=\sqrt{0.05\cdot0.95/400}\approx0.0109$. \;
+$Z=(0.08-0.05)/0.0109\approx2.75$. \;
+$|Z|>1.96 \Rightarrow$ \textbf{rechazar $H_0$}.\\
+\textbf{Conclusión:} La proporción real de defectos es mayor al 5\%.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Uso de EPP en planta (n=200)]
+El reglamento establece que al menos el $90\%$ de los trabajadores deben portar equipo de protección ($p_0=0.90$).
+En una auditoría, se observa a $n=200$ empleados y solo el $85\%$ cumple ($\hat p=0.85$).
+¿Se cumple la norma con $\alpha=0.01$?
+
+\datos{%
+$p_0=0.90$, \quad $n=200$, \quad $\hat p=0.85$, \quad $\alpha=0.01$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p=0.90$ vs.\ $H_1: p\neq0.90$.
+  \item Calcule $SE_0=\sqrt{p_0(1-p_0)/n}$.
+  \item Obtenga $Z$ y compare con $Z_{0.005}=2.576$.
+\end{pasos}
+
+\begin{clave}
+$SE_0=\sqrt{0.90\cdot0.10/200}=0.0212$. \;
+$Z=(0.85-0.90)/0.0212=-2.36$. \;
+$|Z|=2.36<2.576 \Rightarrow$ \textbf{no rechazar $H_0$}.\\
+\textbf{Conclusión:} Con evidencia al 1\% no se puede afirmar incumplimiento.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Entregas a tiempo (n=300)]
+La empresa promete que el $95\%$ de las entregas llegan puntuales ($p_0=0.95$).
+En un muestreo de $n=300$ pedidos, se encuentra que solo el $92\%$ fue puntual ($\hat p=0.92$).
+Pruebe a $\alpha=0.05$ si la promesa es confiable.
+
+\datos{%
+$p_0=0.95$, \quad $n=300$, \quad $\hat p=0.92$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p=0.95$ vs.\ $H_1: p\neq0.95$.
+  \item Calcule $SE_0=\sqrt{p_0(1-p_0)/n}$.
+  \item Obtenga $Z$ y compare con $Z_{0.025}=1.96$.
+\end{pasos}
+
+\begin{clave}
+$SE_0=\sqrt{0.95\cdot0.05/300}=0.0126$. \;
+$Z=(0.92-0.95)/0.0126=-2.38$. \;
+$|Z|>1.96 \Rightarrow$ \textbf{rechazar $H_0$}.\\
+\textbf{Conclusión:} La puntualidad real es menor al 95\%.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Aceptación de lotes en control de calidad (n=500)]
+Un proveedor afirma que el $88\%$ de los lotes pasan inspección ($p_0=0.88$).
+Un comprador inspecciona $n=500$ lotes y observa que $420$ cumplen ($\hat p=0.84$).
+¿Se sostiene la afirmación al nivel $\alpha=0.10$?
+
+\datos{%
+$p_0=0.88$, \quad $n=500$, \quad $\hat p=0.84$, \quad $\alpha=0.10$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p=0.88$ vs.\ $H_1: p\neq0.88$.
+  \item Calcule $SE_0=\sqrt{p_0(1-p_0)/n}$.
+  \item Obtenga $Z$ y compare con $Z_{0.05}=1.645$.
+\end{pasos}
+
+\begin{clave}
+$SE_0=\sqrt{0.88\cdot0.12/500}=0.0145$. \;
+$Z=(0.84-0.88)/0.0145=-2.76$. \;
+$|Z|>1.645 \Rightarrow$ \textbf{rechazar $H_0$}.\\
+\textbf{Conclusión:} La proporción real es menor al 88\%.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Satisfacción de clientes (n=250)]
+Un gerente de servicio afirma que al menos el $85\%$ de los clientes están satisfechos ($p_0=0.85$).
+En una encuesta a $n=250$ clientes, $78\%$ se declararon satisfechos ($\hat p=0.78$).
+¿Es cierta la afirmación con $\alpha=0.05$?
+
+\datos{%
+$p_0=0.85$, \quad $n=250$, \quad $\hat p=0.78$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p=0.85$ vs.\ $H_1: p\neq0.85$.
+  \item Calcule $SE_0=\sqrt{p_0(1-p_0)/n}$.
+  \item Obtenga $Z$ y compare con $Z_{0.025}=1.96$.
+\end{pasos}
+
+\begin{clave}
+$SE_0=\sqrt{0.85\cdot0.15/250}=0.0226$. \;
+$Z=(0.78-0.85)/0.0226=-3.10$. \;
+$|Z|>1.96 \Rightarrow$ \textbf{rechazar $H_0$}.\\
+\textbf{Conclusión:} La satisfacción real es significativamente menor al 85\%.
+\end{clave}
+\end{ejercicio}

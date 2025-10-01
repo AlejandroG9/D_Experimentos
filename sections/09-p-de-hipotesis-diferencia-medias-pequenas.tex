@@ -1,0 +1,206 @@
+%! Author = alejandrogonzalezturrubiates
+%! Date = 09/09/25
+
+\section{Pruebas de hipótesis para diferencia entre medias (muestras pequeñas)}
+
+Cuando los tamaños de muestra son \textbf{pequeños} ($n_1, n_2 < 30$) y las varianzas poblacionales son \textbf{desconocidas pero homogéneas}, se utiliza la distribución $t$ con varianza combinada (pooled):
+
+\[
+S_p^2 = \frac{(n_1-1)S_1^2 + (n_2-1)S_2^2}{n_1+n_2-2},
+\qquad
+SE = S_p \sqrt{\tfrac{1}{n_1} + \tfrac{1}{n_2}}.
+\]
+
+El estadístico es
+\[
+t = \frac{(\bar{X}_1 - \bar{X}_2)-\Delta_0}{SE},
+\qquad t \sim t_{gl}, \quad gl=n_1+n_2-2.
+\]
+
+% ============================================================
+\begin{ejercicio}[Sensibilidad de gerentes con programas educativos]
+Una compañía ha estado investigando dos programas educativos para mejorar la \textbf{sensibilidad de sus gerentes} hacia la necesidad de los empleados.
+El programa \textbf{formal} incluye contacto en aula con psicólogos y sociólogos profesionales.
+El programa \textbf{informal} consiste en sesiones de preguntas y respuestas.
+
+El presidente desea probar, con $\alpha=0.05$, si el nuevo programa formal (más costoso) realmente mejora la sensibilidad.
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & $\bar{x}$ & $s$ & $n$ \\
+\midrule
+Formal & 92 & 15 & 12 \\
+Informal & 84 & 19 & 15 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ \quad vs. \quad $H_1:\mu_1-\mu_2>0$ (unilateral).
+  \item Calcule la varianza combinada:
+  \[
+  S_p^2 = \frac{(12-1)(15^2)+(15-1)(19^2)}{12+15-2}.
+  \]
+  \item Calcule el error estándar:
+  \[
+  SE = S_p \sqrt{\tfrac{1}{12}+\tfrac{1}{15}}.
+  \]
+  \item Obtenga el estadístico:
+  \[
+  t_{\text{obs}} = \frac{(92-84)-0}{SE}.
+  \]
+  \item Compare con $t_{0.05,\,gl=25}$ y concluya si se rechaza $H_0$.
+\end{pasos}
+
+\begin{clave}
+\noindent \textbf{Resultados de referencia:}\\
+$S_p^2 \approx 289.1$, $S_p\approx 17.0$, $SE\approx 6.65$.
+$t_{\text{obs}} \approx 1.20$, $gl=25$, $t_{0.05,25}\approx 1.708$.
+Como $1.20 < 1.708$, \textbf{no se rechaza $H_0$}. No hay evidencia suficiente al 5\% de que el programa formal sea superior.
+\end{clave}
+\end{ejercicio}
+
+
+% ============================================================
+\begin{ejercicio}[Productividad entre dos grupos de operarios]
+Una planta industrial implementa dos programas de capacitación distintos. Se desea saber si el programa A incrementa la productividad (unidades/hora) respecto al programa B.
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & $\bar{x}$ & $s$ & $n$ \\
+\midrule
+Programa A & 55 & 6 & 10 \\
+Programa B & 52 & 5 & 12 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_A-\mu_B=0$ vs. $H_1:\mu_A-\mu_B>0$.
+  \item Calcule $S_p^2$ y $SE$.
+  \item Obtenga $t_{\text{obs}}$.
+  \item Compare con $t_{0.05,\,gl=20}$.
+  \item Interprete si el programa A es más efectivo.
+\end{pasos}
+
+\begin{clave}
+$S_p^2\approx30.0$, $S_p\approx5.48$, $SE\approx2.33$, $t_{\text{obs}}\approx1.29$; $t_{0.05,20}=1.725$.
+Conclusión: no se rechaza $H_0$.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Resistencia de materiales de dos proveedores]
+Se comparan las resistencias (MPa) de acero de dos proveedores.
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & $\bar{x}$ & $s$ & $n$ \\
+\midrule
+Proveedor A & 410 & 25 & 14 \\
+Proveedor B & 395 & 22 & 12 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Hipótesis: $H_0:\mu_A-\mu_B=0$ vs. $H_1:\mu_A-\mu_B\neq0$.
+  \item Calcule $S_p^2$ y $SE$.
+  \item Calcule $t_{\text{obs}}$ y compárelo con $t_{0.025,24}$.
+\end{pasos}
+
+\begin{clave}
+$S_p\approx23.7$, $SE\approx9.0$, $t_{\text{obs}}\approx1.67$, $t_{0.025,24}=2.064$.
+Conclusión: no se rechaza $H_0$.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Tiempo de ensamblaje en dos turnos]
+Se quiere comprobar si el turno de la mañana tarda menos que el turno de la tarde en un proceso de ensamblaje.
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & $\bar{x}$ & $s$ & $n$ \\
+\midrule
+Mañana & 48.5 & 4.2 & 11 \\
+Tarde & 51.0 & 5.0 & 10 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Hipótesis: $H_0:\mu_M-\mu_T=0$ vs. $H_1:\mu_M-\mu_T<0$.
+  \item Calcule $S_p^2$, $SE$, y $t_{\text{obs}}$.
+  \item Compare con $t_{0.05,19}$.
+\end{pasos}
+
+\begin{clave}
+$S_p\approx4.58$, $SE\approx2.0$, $t_{\text{obs}}\approx-1.25$, $t_{0.05,19}=-1.729$.
+Conclusión: no se rechaza $H_0$.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Satisfacción de clientes en dos sucursales]
+Se comparan las calificaciones promedio (escala 0--100) de dos sucursales para evaluar si existen diferencias significativas.
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & $\bar{x}$ & $s$ & $n$ \\
+\midrule
+Sucursal A & 82 & 6 & 9 \\
+Sucursal B & 78 & 5 & 10 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Hipótesis: $H_0:\mu_A-\mu_B=0$ vs. $H_1:\mu_A-\mu_B\neq0$.
+  \item Calcule $S_p^2$, $SE$, y $t_{\text{obs}}$.
+  \item Compare con $t_{0.025,17}$.
+\end{pasos}
+
+\begin{clave}
+$S_p\approx5.48$, $SE\approx2.44$, $t_{\text{obs}}\approx1.64$, $t_{0.025,17}=2.110$.
+Conclusión: no se rechaza $H_0$.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Consumo de combustible de dos vehículos]
+Un investigador quiere comparar el rendimiento (km/L) de dos modelos de automóvil bajo condiciones similares.
+
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & $\bar{x}$ & $s$ & $n$ \\
+\midrule
+Modelo X & 15.2 & 1.1 & 8 \\
+Modelo Y & 14.0 & 1.3 & 9 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Hipótesis: $H_0:\mu_X-\mu_Y=0$ vs. $H_1:\mu_X-\mu_Y>0$.
+  \item Calcule $S_p^2$, $SE$, y $t_{\text{obs}}$.
+  \item Compare con $t_{0.05,15}$.
+\end{pasos}
+
+\begin{clave}
+$S_p\approx1.21$, $SE\approx0.57$, $t_{\text{obs}}\approx2.11$, $t_{0.05,15}=1.753$.
+Conclusión: se rechaza $H_0$. Evidencia de que el Modelo X rinde más.
+\end{clave}
+\end{ejercicio}

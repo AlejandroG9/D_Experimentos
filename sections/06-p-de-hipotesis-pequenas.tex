@@ -1,0 +1,127 @@
+%! Author = alejandrogonzalezturrubiates
+%! Date = 09/09/25
+
+\section{Pruebas de hipótesis para la media (muestras pequeñas, $\sigma$ desconocida)}
+
+\begin{ejercicio}[Puntuación de test de actitudes (n=20)]
+Un especialista afirma que la \textbf{puntuación promedio} del test de actitudes será $\mu_0=90$.
+La gerencia revisa $n=20$ resultados y obtiene $\bar{x}=84$ con desviación estándar muestral $s=11$.
+Con $\alpha=0.10$ (bilateral), ¿tiene razón el especialista?
+
+\datos{%
+$\mu_0=90$, \quad $n=20$, \quad $\bar{x}=84$, \quad $s=11$, \quad $\alpha=0.10$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=90$ vs.\ $H_1:\mu\neq90$.
+  \item Calcule $SE = s/\sqrt{n}$ y el valor crítico $t_{\alpha/2,\,n-1}$.
+  \item Método del estadístico: $t=\dfrac{\bar{x}-\mu_0}{SE}$ y compare $|t|$ con $t_{\alpha/2,\,n-1}$.
+  \item Método del intervalo de aceptación: $\mu_0 \pm t_{\alpha/2,\,n-1}\cdot SE$.
+  \item Concluya en contexto.
+\end{pasos}
+
+\begin{clave}
+$gl=19$, \; $t_{0.05,19}=1.729$, \;
+$SE=\tfrac{11}{\sqrt{20}}\approx 2.459$.\\
+$t=\frac{84-90}{2.459}\approx -2.44$ \; ($|t|>1.729$) $\Rightarrow$ \textbf{rechazar $H_0$}.\\
+Intervalo de aceptación alrededor de $\mu_0$: $90\pm 1.729(2.459)\approx 90\pm 4.25\Rightarrow (85.75,\,94.25)$.\\
+$\bar{x}=84$ queda fuera $\Rightarrow$ misma decisión. \textbf{Conclusión:} no tiene razón el especialista.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Tiempo de capacitación técnica (n=24)]
+Se sostiene que el tiempo medio de un curso interno es $\mu_0=75$ min. Una muestra da
+$\bar{x}=73$ y $s=9$ con $n=24$. Contraste bilateral con $\alpha=0.05$.
+
+\datos{%
+$\mu_0=75$, \quad $n=24$, \quad $\bar{x}=73$, \quad $s=9$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=75$ vs.\ $H_1:\mu\neq75$.
+  \item Calcule $SE$ y $t_{\alpha/2,\,23}$.
+  \item Evalúe $t=(\bar{x}-\mu_0)/SE$ y concluya.
+\end{pasos}
+
+\begin{clave}
+$gl=23$, \; $t_{0.025,23}=2.069$, \;
+$SE=\tfrac{9}{\sqrt{24}}\approx 1.837$.\\
+$t=\frac{73-75}{1.837}\approx -1.09$ \; ($|t|<2.069$) $\Rightarrow$ \textbf{no rechazar $H_0$}.\\
+Intervalo de aceptación: $75\pm 2.069(1.837)\approx (71.20,\,78.80)$; $\bar{x}=73$ está dentro.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Tiempo de alistamiento de célula (n=15)]
+Se declara $\mu_0=100$ s para el tiempo promedio de alistamiento. Muestra: $\bar{x}=102$, $s=5$, $n=15$.
+Use $\alpha=0.10$ bilateral.
+
+\datos{%
+$\mu_0=100$, \quad $n=15$, \quad $\bar{x}=102$, \quad $s=5$, \quad $\alpha=0.10$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=100$ vs.\ $H_1:\mu\neq100$.
+  \item Calcule $SE$ y $t_{\alpha/2,\,14}$; obtenga $t$.
+  \item Decida e interprete.
+\end{pasos}
+
+\begin{clave}
+$gl=14$, \; $t_{0.05,14}=1.761$, \;
+$SE=\tfrac{5}{\sqrt{15}}\approx 1.291$.\\
+$t=\frac{102-100}{1.291}\approx 1.55$ \; ($|t|<1.761$) $\Rightarrow$ \textbf{no rechazar $H_0$}.\\
+Aceptación: $100\pm 1.761(1.291)\approx (97.73,\,102.27)$; $\bar{x}=102$ cae dentro.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Tiempo de verificación en metrología (n=30)]
+Se establece $\mu_0=50$ s. En una muestra se obtiene $\bar{x}=48$ con $s=6$ y $n=30$.
+Contraste bilateral con $\alpha=0.05$.
+
+\datos{%
+$\mu_0=50$, \quad $n=30$, \quad $\bar{x}=48$, \quad $s=6$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=50$ vs.\ $H_1:\mu\neq50$.
+  \item Calcule $SE$ y $t_{\alpha/2,\,29}$; evalúe $t$.
+  \item Concluya en el contexto del laboratorio.
+\end{pasos}
+
+\begin{clave}
+$gl=29$, \; $t_{0.025,29}=2.045$, \;
+$SE=\tfrac{6}{\sqrt{30}}\approx 1.095$.\\
+$t=\frac{48-50}{1.095}\approx -1.83$ \; ($|t|<2.045$) $\Rightarrow$ \textbf{no rechazar $H_0$}.\\
+Aceptación: $50\pm 2.045(1.095)\approx (47.76,\,52.24)$; $\bar{x}=48$ está dentro.
+\end{clave}
+\end{ejercicio}
+
+
+\begin{ejercicio}[Nivel de llenado en envasado (n=18)]
+Se garantiza un nivel medio de llenado $\mu_0=13.0$ ml. En muestreo: $\bar{x}=11.8$ ml, $s=1.8$ ml, $n=18$.
+Use $\alpha=0.05$ (bilateral).
+
+\datos{%
+$\mu_0=13.0$, \quad $n=18$, \quad $\bar{x}=11.8$, \quad $s=1.8$, \quad $\alpha=0.05$
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu=13.0$ vs.\ $H_1:\mu\neq13.0$.
+  \item Calcule $SE$ y $t_{\alpha/2,\,17}$; obtenga $t$.
+  \item Decida y explique el impacto en calidad.
+\end{pasos}
+
+\begin{clave}
+$gl=17$, \; $t_{0.025,17}=2.110$, \;
+$SE=\tfrac{1.8}{\sqrt{18}}\approx 0.424$.\\
+$t=\frac{11.8-13.0}{0.424}\approx -2.83$ \; ($|t|>2.110$) $\Rightarrow$ \textbf{rechazar $H_0$}.\\
+Aceptación: $13.0\pm 2.110(0.424)\approx (12.11,\,13.89)$; $\bar{x}=11.8$ fuera. \textbf{Subllenado significativo.}
+\end{clave}
+\end{ejercicio}

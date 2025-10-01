@@ -1,0 +1,243 @@
+%! Author = alejandrogonzalezturrubiates
+%! Date = 09/09/25
+
+\section{Pruebas de hipótesis para diferencia entre medias (muestras grandes)}
+
+Sean dos poblaciones con medias $\mu_1,\mu_2$ y desviaciones estándar conocidas $\sigma_1,\sigma_2$ (o $n_1,n_2$ grandes). Se desea probar:
+\[
+H_0:\ \mu_1-\mu_2=\Delta_0 \qquad\text{vs}\qquad
+H_1:\ \mu_1-\mu_2 \ \text{(}\neq,\ >,\ <\text{)}\ \Delta_0.
+\]
+Con muestras independientes, el estadístico es
+\[
+Z \;=\; \frac{(\bar X_1-\bar X_2)-\Delta_0}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
+\quad\text{y}\quad Z\sim\mathcal N(0,1)\ \text{bajo }H_0.
+\]
+
+% ============================================================
+\begin{ejercicio}[Diferencia de sueldos por hora entre sedes (prueba bilateral)]
+Una empresa desea comparar el salario por hora entre las sedes \textit{Mante} (1) y \textit{Tampico} (2). Se toman muestras grandes y se asume $\sigma$ conocida.
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Sede & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+Mante & 6.95 & 0.40 & 200 \\
+Tampico & 7.10 & 0.60 & 175 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.05$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ y $H_1:\mu_1-\mu_2\neq 0$ (bilateral).
+  \item Calcule el error estándar $SE$.
+  \item Obtenga el estadístico $z_{\text{obs}}$.
+  \item Compare con el valor crítico $z_{0.025}=1.96$.
+  \item Decisión e interpretación gerencial.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.053$, $z_{\text{obs}}\approx -2.81$; $p\approx 0.005$.
+Como $|z|>1.96$, se rechaza $H_0$. Evidencia de diferencia: Tampico paga más.
+IC95\%: $(-0.255,\,-0.045)$.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Tiempo promedio de proceso entre dos líneas (prueba unilateral)]
+Se comparan los tiempos medios (min) de dos líneas independientes. Se busca evidencia de que la línea 1 es más rápida.
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Línea & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+1 & 12.4 & 1.8 & 64 \\
+2 & 12.8 & 1.5 & 49 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.01$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ vs. $H_1:\mu_1-\mu_2<0$.
+  \item Calcule $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.01}=2.326$.
+  \item Interprete la decisión.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.311$, $z_{\text{obs}}\approx -1.29$.
+No se rechaza $H_0$ al 1\%. No hay evidencia de que la línea 1 sea más rápida.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Tiempo de ciclo en dos turnos de producción]
+Se desea comparar el tiempo promedio de ciclo (min) entre el turno de la mañana (1) y el turno de la noche (2).
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Turno & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+Mañana & 15.2 & 2.4 & 100 \\
+Noche & 14.6 & 2.6 & 90 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.05$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ vs. $H_1:\mu_1-\mu_2\neq 0$.
+  \item Calcule el error estándar $SE$.
+  \item Obtenga $z_{\text{obs}}$ y compárelo con $z_{0.025}=1.96$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.351$, $z_{\text{obs}}\approx 1.71$; $|z|<1.96$.
+No se rechaza $H_0$. No hay diferencia significativa.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Defectos en piezas de dos proveedores]
+Un ingeniero de calidad compara el tiempo de inspección por lote (min) entre proveedor A y proveedor B.
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Proveedor & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+A & 22.5 & 3.5 & 150 \\
+B & 21.8 & 3.8 & 160 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.10$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ vs. $H_1:\mu_1-\mu_2>0$.
+  \item Calcule $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.10}=1.282$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.424$, $z_{\text{obs}}\approx 1.65$.
+$z>1.282$, se rechaza $H_0$. Evidencia de que A tarda más.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Consumo energético de dos máquinas]
+Se analizan dos máquinas que realizan el mismo proceso.
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Máquina & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+1 & 5.20 & 0.75 & 80 \\
+2 & 5.05 & 0.70 & 85 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.01$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ vs. $H_1:\mu_1-\mu_2\neq 0$.
+  \item Calcule $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.005}=2.576$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.114$, $z_{\text{obs}}\approx 1.32$; $|z|<2.576$.
+No se rechaza $H_0$. No hay diferencia en consumo.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Tiempo de entrega entre dos sucursales]
+La gerencia quiere saber si la sucursal A entrega más rápido que la sucursal B.
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Sucursal & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+A & 48.2 & 6.5 & 120 \\
+B & 50.1 & 6.8 & 130 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.05$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ vs. $H_1:\mu_1-\mu_2<0$.
+  \item Calcule $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.05}=1.645$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.825$, $z_{\text{obs}}\approx -2.30$; $z<-1.645$.
+Se rechaza $H_0$. A entrega más rápido.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Horas de capacitación recibidas por ingenieros]
+Se comparan las horas promedio de capacitación anual de dos áreas.
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Área & $\bar{x}$ & $\sigma$ & $n$ \\
+\midrule
+Producción & 35.4 & 4.8 & 60 \\
+Logística & 33.7 & 5.1 & 55 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.05$, \quad $\Delta_0=0$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:\mu_1-\mu_2=0$ vs. $H_1:\mu_1-\mu_2>0$.
+  \item Calcule $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.05}=1.645$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.921$, $z_{\text{obs}}\approx 1.85$; $z>1.645$.
+Se rechaza $H_0$. Producción recibe más capacitación.
+\end{clave}
+\end{ejercicio}

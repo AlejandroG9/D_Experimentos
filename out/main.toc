@@ -1,8 +1,14 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
-\contentsline {section}{\numberline {2}Ejercicios de estimación por intervalos}{1}{section.2}%
-\contentsline {section}{\numberline {3}Rúbrica de evaluación}{4}{section.3}%
+\contentsline {section}{\numberline {2}Ejercicios de estimación por intervalos}{2}{section.2}%
+\contentsline {section}{\numberline {3}Rúbrica de evaluación}{5}{section.3}%
 \contentsline {section}{\numberline {4}Ejercicios de estimación de proporciones}{5}{section.4}%
 \contentsline {section}{\numberline {5}Rúbrica de evaluación}{7}{section.5}%
 \contentsline {section}{\numberline {6}Pruebas de hipótesis (muestras grandes)}{7}{section.6}%
 \contentsline {section}{\numberline {7}Rúbrica de evaluación}{10}{section.7}%
+\contentsline {section}{\numberline {8}Pruebas de hipótesis para proporciones (muestras grandes)}{10}{section.8}%
+\contentsline {section}{\numberline {9}Pruebas de hipótesis para la media (muestras pequeñas, $\sigma $ desconocida)}{13}{section.9}%
+\contentsline {section}{\numberline {10}Rúbrica de evaluación}{15}{section.10}%
+\contentsline {section}{\numberline {11}Pruebas de hipótesis para diferencia entre medias (muestras grandes)}{15}{section.11}%
+\contentsline {section}{\numberline {12}Pruebas de hipótesis para proporciones (muestras grandes)}{19}{section.12}%
+\contentsline {section}{\numberline {13}Pruebas de hipótesis para diferencia entre medias (muestras pequeñas)}{23}{section.13}%

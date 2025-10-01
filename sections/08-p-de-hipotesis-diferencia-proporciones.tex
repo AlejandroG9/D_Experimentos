@@ -1,0 +1,244 @@
+%! Author = alejandrogonzalezturrubiates
+%! Date = 09/09/25
+
+% ============================================================
+\section{Pruebas de hipótesis para proporciones (muestras grandes)}
+
+Sea $\hat{p}_1$ y $\hat{p}_2$ la proporción de éxito en dos muestras independientes, de tamaños $n_1$ y $n_2$.
+Se desea contrastar:
+\[
+H_0: p_1-p_2=0
+\qquad\text{vs}\qquad
+H_1: p_1-p_2 \ \text{(}\neq,>,<\text{)}\ 0.
+\]
+
+El estadístico es
+\[
+Z \;=\; \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}(1-\hat{p})\left(\tfrac{1}{n_1}+\tfrac{1}{n_2}\right)}},
+\]
+donde $\hat{p}$ es la proporción combinada:
+\[
+\hat{p} = \frac{n_1\hat{p}_1+n_2\hat{p}_2}{n_1+n_2}.
+\]
+
+% ============================================================
+\begin{ejercicio}[Comparación de eficacia de dos fármacos]
+Una compañía farmacéutica prueba dos nuevas sustancias para reducir la presión sanguínea.
+En el grupo 1, 71 de 100 pacientes responden al fármaco;
+en el grupo 2, 58 de 90 responden.
+Con $\alpha=0.05$, ¿hay diferencia significativa?
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Éxitos & $n$ & $\hat{p}$ \\
+\midrule
+Grupo 1 & 71 & 100 & 0.71 \\
+Grupo 2 & 58 & 90 & 0.644 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+Nivel de significancia: $\alpha=0.05$ (bilateral).
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0: p_1-p_2=0$ \;vs\; $H_1: p_1-p_2\neq 0$.
+  \item Calcule la proporción combinada:
+  \[
+  \hat{p}=\frac{71+58}{100+90}\approx 0.6789.
+  \]
+  \item Calcule $SE=\sqrt{\hat{p}(1-\hat{p})(1/n_1+1/n_2)}\approx 0.0678$.
+  \item Obtenga $z_{\text{obs}}=(0.71-0.644)/0.0678\approx 0.972$.
+  \item Compare con $z_{0.025}=1.96$ (bilateral).
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.0678$;\quad $z_{\text{obs}}\approx 0.972$;\quad $|z|<1.96$.
+\textbf{No se rechaza $H_0$}. No hay evidencia de diferencia significativa entre los fármacos al 5\%.
+(IC95\% opcional: $(-0.048,\,0.178)$).
+\end{clave}
+\end{ejercicio}
+
+
+
+% ============================================================
+\begin{ejercicio}[Defectos en producción de dos líneas]
+Una planta quiere comparar la proporción de piezas defectuosas entre dos líneas de producción.
+En la línea 1, 45 de 300 piezas fueron defectuosas;
+en la línea 2, 70 de 400 piezas fueron defectuosas.
+Con $\alpha=0.05$, ¿hay diferencia en las tasas de defectos?
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Defectuosas & $n$ & $\hat{p}$ \\
+\midrule
+Línea 1 & 45 & 300 & 0.150 \\
+Línea 2 & 70 & 400 & 0.175 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Nivel de significancia: $\alpha=0.05$ (bilateral).
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item Plantee $H_0:p_1-p_2=0$ vs. $H_1:p_1-p_2\neq 0$.
+  \item Calcule $\hat{p}=\tfrac{45+70}{700}=0.164$.
+  \item Obtenga $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.025}=1.96$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.026$;\quad $z_{\text{obs}}\approx -0.96$;\quad $|z|<1.96$.
+No hay diferencia significativa en defectos.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Preferencia de clientes entre dos productos]
+Un estudio de mercado pregunta a clientes su preferencia entre dos bebidas.
+En una muestra de 250 personas en ciudad A, 180 prefieren la bebida X;
+en ciudad B, 160 de 220 la prefieren.
+¿Existe diferencia significativa al 1%?
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Éxitos & $n$ & $\hat{p}$ \\
+\midrule
+Ciudad A & 180 & 250 & 0.720 \\
+Ciudad B & 160 & 220 & 0.727 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Nivel de significancia: $\alpha=0.01$.
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item $H_0:p_1-p_2=0$ vs. $H_1:p_1-p_2\neq 0$.
+  \item Calcule $\hat{p}=\tfrac{180+160}{470}\approx 0.723$.
+  \item Obtenga $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.005}=2.576$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.042$;\quad $z_{\text{obs}}\approx -0.17$;\quad
+$|z|<2.576$, no se rechaza $H_0$.
+Las preferencias son estadísticamente iguales.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Cumplimiento de estándares de seguridad]
+Se inspeccionan dos fábricas para ver si cumplen con estándares de seguridad.
+En la fábrica 1, 90 de 120 trabajadores cumplen;
+en la fábrica 2, 130 de 200 cumplen.
+Con $\alpha=0.05$, ¿la proporción de cumplimiento es mayor en la fábrica 1?
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Cumplen & $n$ & $\hat{p}$ \\
+\midrule
+Fábrica 1 & 90 & 120 & 0.750 \\
+Fábrica 2 & 130 & 200 & 0.650 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Nivel de significancia: $\alpha=0.05$ (una cola).
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item $H_0:p_1-p_2=0$ vs. $H_1:p_1-p_2>0$.
+  \item Calcule $\hat{p}=\tfrac{220}{320}=0.688$.
+  \item Obtenga $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.05}=1.645$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.049$;\quad $z_{\text{obs}}\approx 2.04$;\quad
+$z>1.645\ \Rightarrow$ se rechaza $H_0$.
+La fábrica 1 tiene mayor proporción de cumplimiento.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Encuesta sobre uso de transporte público]
+Se encuestan ciudadanos en dos ciudades sobre el uso de transporte público.
+En ciudad A, 210 de 350 lo usan;
+en ciudad B, 150 de 280 lo usan.
+¿Hay diferencia al 10%?
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Usan transporte & $n$ & $\hat{p}$ \\
+\midrule
+Ciudad A & 210 & 350 & 0.600 \\
+Ciudad B & 150 & 280 & 0.536 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Nivel de significancia: $\alpha=0.10$ (bilateral).
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item $H_0:p_1-p_2=0$ vs. $H_1:p_1-p_2\neq 0$.
+  \item Calcule $\hat{p}=\tfrac{360}{630}\approx 0.571$.
+  \item Obtenga $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.05}=1.645$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.040$;\quad $z_{\text{obs}}\approx 1.60$;\quad
+$|z|<1.645$, no se rechaza $H_0$.
+No hay diferencia significativa.
+\end{clave}
+\end{ejercicio}
+
+% ============================================================
+\begin{ejercicio}[Satisfacción de clientes entre dos servicios]
+Una empresa mide la satisfacción de clientes (satisfecho/insatisfecho).
+En servicio A, 300 de 400 están satisfechos;
+en servicio B, 250 de 370 lo están.
+¿Existe diferencia significativa al 5%?
+
+\datos{%
+\begin{center}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Satisfechos & $n$ & $\hat{p}$ \\
+\midrule
+Servicio A & 300 & 400 & 0.750 \\
+Servicio B & 250 & 370 & 0.676 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Nivel de significancia: $\alpha=0.05$ (bilateral).
+}
+
+\textbf{Actividad}
+\begin{pasos}
+  \item $H_0:p_1-p_2=0$ vs. $H_1:p_1-p_2\neq 0$.
+  \item Calcule $\hat{p}=\tfrac{550}{770}\approx 0.714$.
+  \item Obtenga $SE$ y $z_{\text{obs}}$.
+  \item Compare con $z_{0.025}=1.96$.
+\end{pasos}
+
+\begin{clave}
+$SE\approx 0.031$;\quad $z_{\text{obs}}\approx 2.39$;\quad
+$|z|>1.96$, se rechaza $H_0$.
+Hay diferencia significativa en satisfacción.
+\end{clave}
+\end{ejercicio}
